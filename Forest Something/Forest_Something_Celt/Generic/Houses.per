@@ -1,0 +1,40 @@
+;HOUSE
+(defrule
+	(current-age == dark-age)
+	(can-build house)
+	(building-type-count house < 1)
+	(building-type-count-total farm > 0)
+	(housing-headroom < 3)
+=>
+	(build house)
+)
+(defrule
+	(current-age == dark-age)
+	(can-build house)
+	(building-type-count house > 0)
+	(housing-headroom < 3)
+=>
+	(build house)
+)
+(defrule
+	(current-age == feudal-age)
+	(can-build house)
+	(housing-headroom < 4)
+=>
+	(build house)
+)
+(defrule
+	(current-age == castle-age)
+	(can-build house)
+	(housing-headroom < 4)
+=>
+	(build house)
+)
+(defrule
+	(current-age == imperial-age)
+	(can-build house)
+	(housing-headroom < 5)
+	(population-headroom > 4)
+=>
+	(build house)
+)

@@ -1,0 +1,24 @@
+;MILLS
+(defrule
+	(current-age == dark-age)
+	(can-build mill)
+	(building-type-count lumber-camp > 0)
+	(building-type-count mill < 1)
+	(wood-amount > 100)
+=>
+	(build mill)
+)
+(defrule
+	(can-build mill)
+	(current-age == castle-age)
+	(building-type-count mill < 2)
+=>
+	(build mill)
+)
+(defrule
+	(can-build mill)
+	(current-age == imperial-age)
+	(building-type-count mill < 3)
+=>
+	(build mill)
+)

@@ -1,0 +1,19 @@
+;MILITARY LINE UPGRADES
+;SPEAR LINE
+(defrule
+	(current-age == imperial-age)
+	(can-research ri-halberdier)
+=>
+	(research ri-halberdier)
+	(chat-to-all "11")
+	(disable-self)
+)
+;RAM LINE
+(defrule
+	(current-age == imperial-age)
+	(can-research ri-siege-ram)
+=>
+	(research ri-siege-ram)
+	(chat-to-all "11")
+	(disable-self)
+)

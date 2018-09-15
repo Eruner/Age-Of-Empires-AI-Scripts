@@ -1,0 +1,31 @@
+;MARKET
+(defrule
+	(current-age == castle-age)
+	(wood-amount > castle-extra-wood)
+	(can-sell-commodity wood)
+=>
+	(sell-commodity wood)
+)
+(defrule
+	(current-age == castle-age)
+	(food-amount > castle-extra-food)
+	(can-sell-commodity food)
+=>
+	(sell-commodity food)
+)
+(defrule
+	(current-age >= castle-age)
+	(stone-amount < 100)
+	(can-buy-commodity stone)
+=>
+	(buy-commodity stone)
+	(disable-self)
+)
+(defrule
+	(current-age == castle-age)
+	(food-amount > castle-early-food)
+	(not (research-completed ri-hand-cart))
+	(can-sell-commodity food)
+=>
+	(sell-commodity food)
+)

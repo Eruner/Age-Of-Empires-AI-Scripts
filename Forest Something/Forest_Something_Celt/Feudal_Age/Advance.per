@@ -1,0 +1,25 @@
+;ADVANCE TO CASTLE
+(defrule
+	(current-age == feudal-age)
+	(gold-amount < feudal-gold)
+	(wood-amount > feudal-extra-wood)
+	(can-sell-commodity wood)
+=>
+	(sell-commodity wood)
+)
+(defrule
+	(current-age == feudal-age)
+	(gold-amount < feudal-gold)
+	(food-amount > feudal-extra-food)
+	(can-sell-commodity food)
+=>
+	(sell-commodity food)
+)
+(defrule
+	(current-age == feudal-age)
+	(can-research castle-age)
+=>
+	(research castle-age)
+	(chat-to-all "is advancing to Castle Age")
+	(chat-to-all "11")
+)

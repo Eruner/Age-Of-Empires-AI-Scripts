@@ -1,0 +1,21 @@
+;MARKET
+(defrule
+	(can-research ri-guilds)
+=>
+	(research ri-guilds)
+	(disable-self)
+)
+(defrule
+	(current-age == imperial-age)
+	(wood-amount > imperial-extra-wood)
+	(can-sell-commodity wood)
+=>
+	(sell-commodity wood)
+)
+(defrule
+	(current-age == imperial-age)
+	(food-amount > imperial-extra-food)
+	(can-sell-commodity food)
+=>
+	(sell-commodity food)
+)

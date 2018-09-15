@@ -1,0 +1,9 @@
+;FEUDAL
+(defrule
+	(current-age == feudal-age)
+=>
+	(set-strategic-number sn-cap-civilian-builders 3)
+	(set-strategic-number sn-wood-gatherer-percentage 55)
+	(set-strategic-number sn-food-gatherer-percentage 45)
+	(disable-self)
+)

@@ -1,0 +1,18 @@
+;BLACKSMITH
+(defrule
+	(current-age == imperial-age)
+	(can-research ri-plate-mail)
+=>
+	(research ri-plate-mail)
+	(chat-to-all "11")
+	(disable-self)
+)
+(defrule
+	(current-age == imperial-age)
+	(research-completed ri-plate-mail)
+	(can-research ri-iron-casting)
+=>
+	(research ri-iron-casting)
+	(chat-to-all "11")
+	(disable-self)
+)

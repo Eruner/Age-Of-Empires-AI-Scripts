@@ -1,0 +1,22 @@
+;FARM STRATEGIC NUMBERS FOR EARLY GAME OPTIMIZATION
+(defrule
+	(building-type-count farm > 0)
+=>
+	(set-strategic-number sn-wood-gatherer-percentage 70)
+	(set-strategic-number sn-food-gatherer-percentage 30)
+	(disable-self)
+)
+(defrule
+	(building-type-count farm > 1)
+=>
+	(set-strategic-number sn-wood-gatherer-percentage 30)
+	(set-strategic-number sn-food-gatherer-percentage 70)
+	(disable-self)
+)
+(defrule
+	(building-type-count farm > 2)
+=>
+	(set-strategic-number sn-wood-gatherer-percentage 40)
+	(set-strategic-number sn-food-gatherer-percentage 60)
+	(disable-self)
+)

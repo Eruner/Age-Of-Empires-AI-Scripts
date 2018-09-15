@@ -1,0 +1,22 @@
+;ECO TECHS
+(defrule
+	(current-age == feudal-age)
+	(can-research ri-wheel-barrow)
+=>
+	(research ri-wheel-barrow)
+	(disable-self)
+)
+(defrule
+	(current-age == feudal-age)
+	(can-research ri-double-bit-axe)
+=>
+	(research ri-double-bit-axe)
+	(disable-self)
+)
+(defrule
+	(current-age == feudal-age)
+	(can-research ri-horse-collar)
+=>
+	(research ri-horse-collar)
+	(disable-self)
+)

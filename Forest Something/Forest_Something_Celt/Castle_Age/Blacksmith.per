@@ -1,0 +1,26 @@
+;MILITARY TECH
+(defrule
+	(current-age >= castle-age)
+	(can-research ri-scale-mail)
+=>
+	(research ri-scale-mail)
+)
+(defrule
+	(current-age >= castle-age)
+	(can-research ri-chain-mail)
+=>
+	(research ri-chain-mail)
+)
+(defrule
+	(current-age >= castle-age)
+	(research-completed ri-chain-mail)
+	(can-research ri-forging)
+=>
+	(research ri-forging)
+)
+(defrule
+	(current-age >= castle-age)
+	(can-research ri-blast-furnace)
+=>
+	(research ri-blast-furnace)
+)

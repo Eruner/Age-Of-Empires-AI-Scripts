@@ -1,0 +1,33 @@
+;SIEGE WORKSHOP
+(defrule
+	(current-age == castle-age)
+	(building-type-count-total town-center > 1)
+	(building-type-count-total siege-workshop < 1)
+	(can-build siege-workshop)
+=>
+	(build siege-workshop)
+)
+;UNIVERSITY
+(defrule
+	(current-age == castle-age)
+	(building-type-count-total town-center > 1)
+	(building-type-count-total university < 1)
+	(can-build university)
+=>
+	(build university)
+)
+;MILITARY BUILDINGS
+(defrule
+	(current-age == castle-age)
+	(building-type-count-total barracks < 1)
+	(can-build barracks)
+=>
+	(build barracks)
+)
+;BOOM = EXTRA TOWN CENTER
+(defrule
+	(current-age >= castle-age)
+	(can-build town-center)
+=>
+	(build town-center)
+)

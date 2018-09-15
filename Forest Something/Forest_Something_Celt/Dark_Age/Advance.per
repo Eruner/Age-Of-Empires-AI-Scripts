@@ -1,0 +1,11 @@
+(defrule
+	(current-age == dark-age)
+	(can-research feudal-age)
+=>
+	(chat-to-all "is advancing to Feudal Age")
+	(research feudal-age)
+	(set-strategic-number sn-mill-max-distance 25)
+	(set-strategic-number sn-wood-dropsite-distance 3)
+	(set-strategic-number sn-maximum-wood-drop-distance 7)
+	(disable-self)
+)

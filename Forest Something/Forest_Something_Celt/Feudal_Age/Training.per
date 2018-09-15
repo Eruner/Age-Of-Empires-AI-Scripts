@@ -1,0 +1,7 @@
+(defrule
+	(current-age == feudal-age)
+	(can-train spearman-line)
+	(unit-type-count-total spearman-line < 1)
+=>
+	(train spearman-line)
+)

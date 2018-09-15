@@ -1,0 +1,10 @@
+;LUMBER CAMPS
+(defrule
+	(or
+		(dropsite-min-distance wood > 3)
+		(building-type-count lumber-camp < 1)
+	)
+	(can-build lumber-camp)
+=>
+	(build lumber-camp)
+)

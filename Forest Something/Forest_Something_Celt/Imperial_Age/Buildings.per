@@ -1,0 +1,24 @@
+;MILITARY BUILDINGS
+(defrule
+	(current-age == imperial-age)
+	(not (research-completed ri-halberdier))
+	(building-type-count-total barracks < 3)
+	(can-build barracks)
+=>
+	(build barracks)
+)
+(defrule
+	(current-age == imperial-age)
+	(research-completed ri-halberdier)
+	(building-type-count-total barracks < 5)
+	(can-build barracks)
+=>
+	(build barracks)
+)
+(defrule
+	(current-age == imperial-age)
+	(building-type-count-total siege-workshop < 2)
+	(can-build siege-workshop)
+=>
+	(build siege-workshop)
+)

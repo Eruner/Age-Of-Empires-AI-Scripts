@@ -1,0 +1,40 @@
+;VILLAGERS
+(defrule
+	(current-age == dark-age)
+	(not (can-afford-research feudal-age))
+	(unit-type-count villager < dark-villagers)
+	(can-train villager)
+=>
+	(train villager)
+)
+(defrule
+	(current-age == feudal-age)
+	(research-completed ri-wheel-barrow)
+	(not (can-afford-research castle-age))
+	(unit-type-count villager < feudal-villagers)
+	(can-train villager)
+=>
+	(train villager)
+)
+(defrule
+	(current-age == castle-age)
+	(research-completed ri-hand-cart)
+	(not (can-afford-research imperial-age))
+	(unit-type-count villager < castle-villagers)
+	(can-train villager)
+=>
+	(train villager)
+)
+(defrule
+	(current-age == imperial-age)
+	(unit-type-count villager < imperial-villagers)
+	(can-train villager)
+=>
+	(train villager)
+)
+(defrule
+	(can-research ri-loom)
+	(not (research-completed ri-loom))
+=>
+	(research ri-loom)
+)

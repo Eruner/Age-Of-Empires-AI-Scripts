@@ -1,0 +1,31 @@
+;FARMS
+(defrule
+	(current-age == dark-age)
+	(can-build farm)
+	(idle-farm-count < 1)
+	(building-type-count mill > 0)
+	(building-type-count farm < dark-farms)
+=>
+	(build farm)
+)
+(defrule
+	(current-age == feudal-age)
+	(can-build farm)
+	(building-type-count farm < feudal-farms)
+=>
+	(build farm)
+)
+(defrule
+	(current-age == castle-age)
+	(can-build farm)
+	(building-type-count farm < castle-farms)
+=>
+	(build farm)
+)
+(defrule
+	(current-age == imperial-age)
+	(can-build farm)
+	(building-type-count farm < imperial-farms)
+=>
+	(build farm)
+)

@@ -1,0 +1,21 @@
+;MILITARY LINE UPGRADES
+;SPEAR LINE
+(defrule
+	(current-age == castle-age)
+	(can-research ri-pikeman)
+=>
+	(research ri-pikeman)
+)
+(defrule
+	(current-age == castle-age)
+	(can-research ri-tracking)
+=>
+	(research ri-tracking)
+)
+;RAM LINE
+(defrule
+	(current-age >= castle-age)
+	(can-research ri-capped-ram)
+=>
+	(research ri-capped-ram)
+)

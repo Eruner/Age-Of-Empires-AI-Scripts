@@ -1,0 +1,20 @@
+;ADVANCE TO IMPERIAL
+(defrule
+	(current-age == castle-age)
+	(not (town-under-attack))
+	(can-research imperial-age)
+=>
+	(research imperial-age)
+	(chat-to-all "is advancing to Imperial Age")
+	(chat-to-all "11")
+	(attack-now)
+)
+(defrule
+	(current-age == castle-age)
+	(town-under-attack)
+	(can-research imperial-age)
+=>
+	(research imperial-age)
+	(chat-to-all "is advancing to Imperial Age")
+	(chat-to-all "11")
+)

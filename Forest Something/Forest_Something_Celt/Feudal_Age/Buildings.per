@@ -1,0 +1,25 @@
+;MARKET
+(defrule
+	(building-type-count-total market < 1)
+	(can-build market)
+=>
+	(build market)
+)
+;BLACKSMITH
+(defrule
+	(current-age == feudal-age)
+	(building-type-count-total blacksmith < 1)
+	(can-build blacksmith)
+=>
+	(build blacksmith)
+)
+;MILITARY BUILDINGS
+(defrule
+	(current-age == feudal-age)
+	(building-type-count-total blacksmith > 0)
+	(building-type-count-total market > 0)
+	(building-type-count-total barracks < 1)
+	(can-build barracks)
+=>
+	(build barracks)
+)

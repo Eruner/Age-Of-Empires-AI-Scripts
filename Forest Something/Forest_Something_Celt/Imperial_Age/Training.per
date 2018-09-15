@@ -1,0 +1,35 @@
+;MILITARY PRODUCTION
+(defrule
+	(current-age > castle-age)
+	(not (research-completed ri-halberdier))
+	(unit-type-count-total spearman-line < 20)
+	(can-train spearman-line)
+=>
+	(train spearman-line)
+)
+(defrule
+	(current-age > castle-age)
+	(research-completed ri-halberdier)
+	(unit-type-count-total spearman-line < 40)
+	(can-train spearman-line)
+=>
+	(train spearman-line)
+)
+(defrule
+	(current-age > castle-age)
+	(not (town-under-attack))
+	(not (research-completed ri-halberdier))
+	(unit-type-count battering-ram-line < 4)
+	(can-train battering-ram-line)
+=>
+	(train battering-ram-line)
+)
+(defrule
+	(current-age > castle-age)
+	(not (town-under-attack))
+	(research-completed ri-halberdier)
+	(unit-type-count battering-ram-line < 6)
+	(can-train battering-ram-line)
+=>
+	(train battering-ram-line)
+)

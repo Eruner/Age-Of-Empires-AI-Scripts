@@ -1,0 +1,19 @@
+;ECO TECHS
+(defrule
+	(current-age >= castle-age)
+	(can-research ri-hand-cart)
+=>
+	(research ri-hand-cart)
+)
+(defrule
+	(current-age >= castle-age)
+	(can-research ri-bow-saw)
+=>
+	(research ri-bow-saw)
+)
+(defrule
+	(current-age >= castle-age)
+	(can-research ri-heavy-plow)
+=>
+	(research ri-heavy-plow)
+)
