@@ -4,7 +4,7 @@ As an inspiration of [Forest](https://www.youtube.com/watch?v=CTRwNlRaw9Y) [Noth
 ## How to make this map type
 `Forest Something` map is an alternative to the `Forest Nothing` map. To create the Forest Something map, just generate any random map and remove everything except trees, town centers, villagers and scouts. Yes, not other resources, no gold, no food, not even wolfs nor relics.  
 
-##Featured Bots:
+## Featured Bots:
 * Forest_Something_Celt - first version aimed for Celts civilization
 
 ### Celtic first version
