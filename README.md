@@ -1,6 +1,6 @@
-# Age-Of-Empires-AI-Scripts
-Scripts for AI Bots that are used in Age Of Empires II (and HD edition). 
-
+# Age of Empires - AI Scripts
+Scripts for AI Bots that are used in Age Of Empires II (and HD edition).  
+![Age of Empires HD](https://i.imgur.com/Q9Il221.png)  
 ## Introduction
 [Age of Empires II](https://en.wikipedia.org/wiki/Age_of_Empires_II) is a popular real-time strategy game which, apart from scenarios and skirmishes, offers ability to create your own scenarios and AIs. Our focus will be about AI part of the game, which is mostly about declarative scripts (rules), so don't expect neural networks nor advanced programming.  
 I highly recommend reading [AI Scripting Guide](http://aok.heavengames.com/cgi-bin/forums/display.cgi?action=ct&f=26,29,,30) first, which is a solid introduction to writing bots for AoE.  
